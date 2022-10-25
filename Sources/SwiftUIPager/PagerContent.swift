@@ -266,7 +266,7 @@ extension Pager {
                         guard abs(pageIncrement) > 0 else {
                             withAnimation(animation) {
                                 pagerModel.draggingOffset = -offset * pageDistance
-                                pagerModel.objectWillChange.send()
+                                self.onDragGestureEnded()
                             }
                             return
                         }
